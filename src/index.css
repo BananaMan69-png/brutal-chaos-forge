@@ -155,3 +155,62 @@
 .animate-vs-pulse { animation: vs-pulse 1.5s ease-in-out infinite; }
 .animate-slide-up { animation: slide-up 0.4s ease-out; }
 .animate-float-up { animation: float-up 1s ease-out forwards; }
+
+/* Weather effects */
+@keyframes rain-fall {
+  0% { transform: translateY(-10px); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0.3; }
+}
+
+@keyframes snow-fall {
+  0% { transform: translateY(-10px) translateX(0); opacity: 0; }
+  10% { opacity: 0.8; }
+  50% { transform: translateY(50vh) translateX(20px); }
+  100% { transform: translateY(100vh) translateX(-10px); opacity: 0; }
+}
+
+@keyframes fire-particle {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-120px) scale(0); opacity: 0; }
+}
+
+@keyframes meteor-fall {
+  0% { transform: translateY(-50px) translateX(0); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(120vh) translateX(-200px); opacity: 0; }
+}
+
+@keyframes fog-drift {
+  0%, 100% { opacity: 0.05; transform: translateX(0); }
+  50% { opacity: 0.15; transform: translateX(30px); }
+}
+
+@keyframes lightning-flash {
+  0%, 100% { background-color: transparent; }
+  5% { background-color: rgba(255, 255, 255, 0.3); }
+  10% { background-color: transparent; }
+  12% { background-color: rgba(255, 255, 255, 0.15); }
+  14% { background-color: transparent; }
+}
+
+@keyframes wind-line {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100vw); opacity: 0; }
+}
+
+@keyframes blood-splat {
+  0% { transform: scale(0); opacity: 0; }
+  30% { transform: scale(1.3); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 0; }
+}
+
+.animate-rain { animation: rain-fall linear infinite; }
+.animate-snow { animation: snow-fall ease-in-out infinite; }
+.animate-fire-particle { animation: fire-particle ease-out infinite; }
+.animate-meteor { animation: meteor-fall linear infinite; }
+.animate-fog { animation: fog-drift ease-in-out 6s infinite; }
+.animate-lightning-flash { animation: lightning-flash 4s ease-in-out infinite; }
+.animate-wind-line { animation: wind-line linear infinite; }
+.animate-blood-splat { animation: blood-splat 1.5s ease-out forwards; }
